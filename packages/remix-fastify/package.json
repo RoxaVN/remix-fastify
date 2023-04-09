@@ -1,8 +1,8 @@
 {
-  "name": "@mcansh/remix-fastify",
+  "name": "@roxavn/remix-fastify",
   "version": "2.7.0",
   "description": "Fastify server request handler for Remix",
-  "repository": "mcansh/remix-fastify",
+  "repository": "roxavn/remix-fastify",
   "license": "MIT",
   "author": "Logan McAnsh <logan@remix.run> (https://remix.run)",
   "exports": {
