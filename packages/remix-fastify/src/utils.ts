@@ -21,6 +21,7 @@ export function getStaticFiles({
   let staticFilePaths = globSync(`public/**/*`, {
     dot: true,
     nodir: true,
+    follow: true,
     cwd: rootDir,
   });
 
