@@ -124,9 +124,10 @@ let remixFastify: FastifyPluginAsync<PluginOptions> = async (
 
       let origin = `${request.protocol}://${request.hostname}`;
       let url = new URL(`${origin}${request.url}`);
+      let pathname = decodeURIComponent(url.pathname);
 
       let staticFile = staticFiles.find((file) => {
-        return url.pathname === file.browserAssetUrl;
+        return pathname === file.browserAssetUrl;
       });
 
       if (staticFile) {
