@@ -1,5 +1,61 @@
 # @mcansh/remix-fastify
 
+## 3.2.1
+
+### Patch Changes
+
+- d11803a: remove `criticalCss` option from createRequestHandler as it's now handled by the vite plugin in an agnostic way
+
+## 3.2.0
+
+### Minor Changes
+
+- a5ee9f1: add support for inlining criticalCss when using the vite plugin
+
+## 3.1.0
+
+### Minor Changes
+
+- f6793b4: remove `staticFilePlugin` wrapper around `@fastify/static` as the example is now configured properly to find new files without colliding with remix routes
+
+### Patch Changes
+
+- 8f3093e: update author info, add keywords and funding keys to package.json
+- 25f00c3: bump dependencies to latest
+
+## 3.0.2
+
+### Patch Changes
+
+- 9560ef1: fix: actually determind requested file
+- 66ba8e5: move glob inside onRequest hook in order for getStaticFiles to be called. doing this allows the removal of node --watch which i totally didn't realize was restarting the server as we import the build 😅
+
+## 3.0.1
+
+### Patch Changes
+
+- 1484ec4: Uses the normalized path for `filePublicPath`.
+
+## 3.0.0
+
+### Major Changes
+
+- 40e8daa: remove plugin in favor of having server code in server. this allows live reload funcationally of `remix dev` to work
+
+  you can find an example of the updated server code in [/example/server.js](/example/server.js)
+
+### Minor Changes
+
+- 40e8daa: remove references to fetch polyfills
+
+## 2.8.1
+
+### Patch Changes
+
+- 4789835: add custom contentParser for json
+
+  fastify automatically configures `application/json` which prevents fethcer.submit from working with json encoding
+
 ## 2.8.0
 
 ### Minor Changes
